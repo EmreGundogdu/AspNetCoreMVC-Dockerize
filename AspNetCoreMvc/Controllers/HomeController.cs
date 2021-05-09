@@ -37,7 +37,13 @@ namespace AspNetCoreMvc.Controllers
             var images = _fileProvider.GetDirectoryContents("wwwroot/images").ToList().Select(x => x.Name);
             return View(images);
         }
-
+        [HttpPost]
+        public IActionResult ImageShow(string name)
+        {
+            var file = _fileProvider.GetDirectoryContents("wwwroot/images").ToList().First(x => x.Name == name);
+            System.IO.File.Delete(file.PhysicalPath);
+            return RedirectToAction("ImageShow");
+        }
         public IActionResult ImageSave()
         {
             return View();
