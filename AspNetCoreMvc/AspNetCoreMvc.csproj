@@ -2,13 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>0470a8d2-cec5-4cd5-990b-83e8c9731c2a</UserSecretsId>
-    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.13" />
-  </ItemGroup>
+  </PropertyGroup>  
 
   <ItemGroup>
     <Folder Include="wwwroot\images\" />
